@@ -6,7 +6,7 @@ export default function Page() {
   return (
     <>
       <section>
-        <div className="mt-30">
+        <div className="mt-54 md:mt-40 xl:mt-40">
        <Hero/>
         </div>
       </section>

@@ -56,7 +56,7 @@ const links = [
 export default function Navbar() {
   const pathname = usePathname();
   return (
-    <nav className="fixed top-0 w-full bg-white backdrop-blur-md z-50 border-b">
+    <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b">
       <div className="bg-[#215aff]">
         <div className="container mx-auto px-5 lg:px-10 xl:px-0 py-2 text-white flex justify-between flex-wrap">
           <div className="flex gap-4 flex-wrap">
@@ -85,7 +85,7 @@ export default function Navbar() {
       <div className="container mx-auto px-5 lg:px-10 xl:px-0  py-4 flex">
         <div className="items-center">
           <Link href="/">
-            <Image alt="Logo" src="/logo.jpg" width={100} height={100} />
+            <Image alt="Logo" src="/logo.png" width={150} height={117} />
           </Link>
         </div>
         <div className="container mx-auto flex items-center justify-center">

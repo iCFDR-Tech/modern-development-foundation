@@ -28,16 +28,16 @@ export default function Footer() {
 
       <div className="mt-20 container mx-auto text-white grid grid-cols-1  md:grid-cols-4 space-y-5 md:space-y-0">
         <div className="flex items-center justify-center">
-          <Link href="#">Cancellation & Refund</Link>
+          <Link href="cancellation-refund">Cancellation & Refund</Link>
         </div>
         <div className="flex items-center justify-center">
-          <Link href="#">Privacy Policy</Link>
+          <Link href="privacy-policy">Privacy Policy</Link>
         </div>
         <div className="flex items-center justify-center">
-          <Link href="#">Terms & Conditions</Link>
+          <Link href="terms-conditions">Terms & Conditions</Link>
         </div>
         <div className="flex items-center justify-center">
-          <Link href="#">Shipping Policy</Link>
+          <Link href="shipping-policy">Shipping Policy</Link>
         </div>
       </div>
     </div>

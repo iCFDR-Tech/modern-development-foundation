@@ -13,6 +13,7 @@ import {
 import {
   BookOpenText,
   Eye,
+  HandHeart,
   Home,
   Mail,
   Menu,
@@ -25,31 +26,31 @@ import {
   faFacebookSquare,
   faInstagramSquare,
   faLinkedin,
-
   faXTwitter,
   faYoutubeSquare,
 } from "@fortawesome/free-brands-svg-icons";
+import { Button } from "../ui/button";
 
 const links = [
   {
     href: "/",
     label: "Home",
-    icon: <Home />,
+    icon: <Home className="w-5 h-5" />,
   },
   {
     href: "/about",
     label: "About Us",
-    icon: <BookOpenText />,
+    icon: <BookOpenText className="w-5 h-5"/>,
   },
   {
     href: "/vision-mission",
     label: "Vision & Mission",
-    icon: <Eye />,
+    icon: <Eye className="w-5 h-5"/>,
   },
   {
     href: "/contact",
     label: "Contact Us",
-    icon: <PhoneCall />,
+    icon: <PhoneCall className="w-4 h-4"/>,
   },
 ];
 
@@ -89,7 +90,7 @@ export default function Navbar() {
           </Link>
         </div>
         <div className="container mx-auto flex items-center justify-center">
-          <div className="text-lg font-semibold hidden md:inline-flex">
+          <div className="text-base lg:text-lg font-semibold hidden md:inline-flex">
             <div className="flex items-center gap-8">
               {links.map((link, idx) => {
                 return (
@@ -106,6 +107,16 @@ export default function Navbar() {
           </div>
         </div>
 
+        <div className="hidden md:inline-flex">
+          <div className="flex items-center">
+            <a href="#">
+              <Button className="bg-[#000d44] hover:bg-[#000d44]/80 cursor-pointer rounded-3xl">
+                Donate Now
+              </Button>
+            </a>
+          </div>
+        </div>
+
         <div className="inline-flex md:hidden">
           <Sheet>
             <SheetTrigger>
@@ -117,7 +128,7 @@ export default function Navbar() {
                   <SheetTitle key={idx} className="mb-2">
                     <Link
                       href={link.href}
-                      className={`flex gap-2 ${
+                      className={`flex gap-2 items-center ${
                         pathname === link.href ? "text-blue-500" : ""
                       }`}
                     >
@@ -126,6 +137,13 @@ export default function Navbar() {
                     </Link>
                   </SheetTitle>
                 ))}
+
+                <SheetTitle>
+                  <a href="#" className="flex gap-2 items-center">
+                    <HandHeart className="w-5 h-5"/>
+                    <nav>Donate</nav>
+                  </a>
+                </SheetTitle>
               </SheetHeader>
             </SheetContent>
           </Sheet>

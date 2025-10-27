@@ -14,8 +14,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "MODERN DEVELOPMENT FOUNDATION",
-  description: "MODERN DEVELOPMENT FOUNDATION",
+  title: "MODERN DREAM FOUNDATION",
+  description: "MODERN DREAM FOUNDATION",
+  icons:{
+    icon:"/logo.png"
+  }
 };
 
 export default function RootLayout({ children }) {
